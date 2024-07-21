@@ -1,0 +1,47 @@
+value = 'Y'
+b = 0
+e = 0
+while (value == 'y' or value == 'Y'):
+    print("Press 1 for Economy  \nPress 2 for Business class \nPress 3 for other")
+    cho = int(input("Enter Your choice :  "))
+    if cho == 1 or cho == 2:
+        if b == 300 and e == 200:
+            print("HOUSEFULL")
+            break
+    if cho == 1:
+        a = int(input("Enter Number of People : "))
+        b = a + b 
+        if b <= 300:
+            c = a * 500
+            print("TICKET")
+            print("No of People = ", a)
+            print("Total Amount = ", c)
+        else:
+            print("No Seats")
+            
+    elif cho == 2:
+        d = int(input("Enter Number Of Prople : "))
+        e = e + d 
+        if e <= 200:
+            f = d * 1000
+            print("Ticket")
+            print("Number of People : ",d)
+            print("Total Amount : ", f)
+        else:
+            print("No Seats")
+            
+    elif cho == 3:
+        print("To Check Number of Business Class Ticket Sold Press 1 \nTo check Number of Economy seats sold Press 2 \nTo See Total Amount Recived Press 3  ")
+        cho2 = int(input("Enter Your Choice : "))
+        if cho2 == 1:
+            print("Number of Busimess Class Ticket Sold : ",e)
+        elif cho2 ==2:
+            print("Number of Economy Seats sold : ", b)
+        elif cho2 == 3:
+            total = f + c
+            print("Total Amount Recived : ", total)
+        else:
+            print("Wrong Choice ")
+    else:
+        print("Wrong Choice ")
+    value = input("Do You Want To Continue :  ")
